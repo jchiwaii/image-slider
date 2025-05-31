@@ -16,7 +16,7 @@ const Slider = () => {
     setTimeout(() => {
       setIndex(newIndex);
       setAnimating(false);
-    }, 400); // match transition duration
+    }, 400);
   };
 
   return (
@@ -46,7 +46,7 @@ const Slider = () => {
           {descriptions.map((desc, i) => (
             <p
               className={`
-                text-center sm:text-xl text-gray-400 absolute left-0 right-0
+                text-center sm:text-md text-gray-400 absolute left-0 right-0
                 transition-all duration-400 ease-in-out
                 ${
                   i === index
@@ -61,7 +61,7 @@ const Slider = () => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-x-5">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-x-5">
         <button
           className="bg-gray-100 p-1.5 cursor-pointer rounded-full text-gray-600 hover:bg-gray-200 transition-colors"
           disabled={animating}
